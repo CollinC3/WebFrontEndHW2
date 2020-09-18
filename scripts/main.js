@@ -36,7 +36,7 @@ function addThumbClickHandler(thumb) {
         event.preventDefault();
         setDetailsFromThumb(thumb);
         showDetails();
-    })
+    });
 }
 
 function getThumbnailsArray() {
@@ -69,7 +69,7 @@ function addKeyPressHandler() {
         if (event.keyCode === ESC_KEY) {
             hideDetails();
         }
-    })
+    });
 }
 
 function initializeEvents() {
@@ -80,4 +80,3 @@ function initializeEvents() {
 }
 
 initializeEvents();
-//setDetails('img/otter4.jpg', "Night Fever");

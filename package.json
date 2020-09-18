@@ -1,0 +1,22 @@
+{
+  "name": "webfrontendhw2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CollinC3/WebFrontEndHW2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CollinC3/WebFrontEndHW2/issues"
+  },
+  "homepage": "https://github.com/CollinC3/WebFrontEndHW2#readme",
+  "devDependencies": {
+    "eslint": "^7.9.0"
+  }
+}
