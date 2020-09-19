@@ -85,7 +85,7 @@ function prevButton() {
     var thumbnails = getThumbnailsArray();
     var detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);
     var digit = detailImage.getAttribute('src');
-    digit = parseInt(digit.match(/\d/g).join(''),10);
+    digit = parseInt(digit.match(/\d/g).join(''), 10);
     if (digit === 1) {
         setDetails(thumbnails[4].getAttribute('data-image-url'), thumbnails[4].getAttribute('data-image-title'));
     } else {
@@ -97,7 +97,7 @@ function nextButton() {
     var thumbnails = getThumbnailsArray();
     var detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);
     var digit = detailImage.getAttribute('src');
-    digit = parseInt(digit.match(/\d/g).join(''),10);
+    digit = parseInt(digit.match(/\d/g).join(''), 10);
     if (digit === 5) {
         setDetails(thumbnails[0].getAttribute('data-image-url'), thumbnails[0].getAttribute('data-image-title'));
     } else {
