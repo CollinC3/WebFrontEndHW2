@@ -6,9 +6,11 @@ var HIDDEN_DETAIL_CLASS = 'hidden-detail';
 var TINY_EFFECT_CLASS = 'is-tiny';
 var ESC_KEY = 27;
 
+
 function setDetails(imageUrl, titleText) {
     'use strict';
     var detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);
+    console.log(detailImage);
     detailImage.setAttribute('src', imageUrl);
 
     var detailTitle = document.querySelector(DETAIL_TITLE_SELECTOR);
@@ -77,6 +79,30 @@ function initializeEvents() {
     var thumbnails = getThumbnailsArray();
     thumbnails.forEach(addThumbClickHandler);
     addKeyPressHandler();
+}
+
+function prevButton() {
+    var thumbnails = getThumbnailsArray();
+    var detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);
+    var digit = detailImage.getAttribute('src');
+    digit = parseInt(digit.match(/\d/g).join(''),10);
+    if (digit === 1) {
+        setDetails(thumbnails[4].getAttribute('data-image-url'), thumbnails[4].getAttribute('data-image-title'));
+    } else {
+        setDetails(thumbnails[digit - 2].getAttribute('data-image-url'), thumbnails[digit - 2].getAttribute('data-image-title'));
+    }
+}
+
+function nextButton() {
+    var thumbnails = getThumbnailsArray();
+    var detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);
+    var digit = detailImage.getAttribute('src');
+    digit = parseInt(digit.match(/\d/g).join(''),10);
+    if (digit === 5) {
+        setDetails(thumbnails[0].getAttribute('data-image-url'), thumbnails[0].getAttribute('data-image-title'));
+    } else {
+        setDetails(thumbnails[digit].getAttribute('data-image-url'), thumbnails[digit].getAttribute('data-image-title'));
+    }
 }
 
 initializeEvents();

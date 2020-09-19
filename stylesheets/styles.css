@@ -93,6 +93,23 @@ a {
     font-size: 18px;
 }
 
+.pic-buttons {
+    position: relative;
+    text-align: center;
+    font-size: 75px;
+    bottom: 10px;
+}
+
+.prev {
+    background: rgb(149, 194, 215);
+    border: 1px solid rgb(100%, 100%, 100%);
+}
+
+.next {
+    background: rgb(149, 194, 215);
+    border: 1px solid rgb(100%, 100%, 100%);
+}
+
 .detail-image-container {
     flex: 1 1 auto;
     display: flex;
